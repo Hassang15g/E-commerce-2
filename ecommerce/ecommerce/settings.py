@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'base',
     'rest_framework',
+    'drf_yasg',
 
 ]
 
@@ -58,7 +59,9 @@ ROOT_URLCONF = 'ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+          'DIRS': [
+            os.path.join(BASE_DIR , "Front/my-app/public")
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
